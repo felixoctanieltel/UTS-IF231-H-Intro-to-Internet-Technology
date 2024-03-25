@@ -1,0 +1,108 @@
+/* Atur navbar */
+.navbar {
+    background-color: #fff; /* Atur warna latar belakang navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan shadow untuk efek drop-down */
+    position: fixed; /* Tetapkan navbar ke posisi tetap */
+    top: 0; /* Letakkan navbar di bagian paling atas */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Pastikan navbar berada di atas konten lain */
+}
+
+.navbar-brand {
+    padding: 0 15px; /* Atur padding untuk mereposisi navbar brand */
+    margin-right: auto; /* Memindahkan navbar brand ke kiri */
+    margin-left: -250px; /* Menambahkan margin kiri */
+}
+
+/* Pisahkan navbar dari container body */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding-top: 70px; /* Sesuaikan padding atas untuk menampung navbar */
+}
+
+.container-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #ff3333;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.success-message {
+    color: #28a745;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Styling untuk daftar transaksi */
+#daftarTransaksi {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#daftarTransaksi li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#daftarTransaksi li:last-child {
+    border-bottom: none;
+}
+
+/* Tambahkan warna latar belakang hijau untuk transaksi pendapatan (income) */
+#daftarTransaksi .income {
+    background-color: lightgreen;
+}
+
+/* Tambahkan warna latar belakang merah untuk transaksi pengeluaran (outcome) */
+#daftarTransaksi .outcome {
+    background-color: lightcoral;
+}
+
+#daftarTransaksi li:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s;
+}
