@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 12 (IF231-H&HL)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="aset/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Data Mahasiswa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+            <!-- Left side of the navbar -->
+        </div>
+        <div class="navbar-nav ml-auto">
+            <!-- Right side of the navbar -->
+            <div class="nav-item">
+                <span class="navbar-text profile-name">John Doe</span>
+                <img src="aset/img/profile.png" alt="Profile Picture" class="profile-picture">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2>Hello John</h2>
+    <p>hiiiii</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NIM</th> 
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="data-table-body">
+            <!-- Data rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary mb-3" onclick="openModal()">Tambah Data</button>
+</div>
+
+<!-- Modal for adding new data -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Tambah Data</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="data-form">
+                    <div class="form-group">
+                        <label for="nama">Nama:</label>
+                        <input type="text" class="form-control" id="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nim">NIM:</label> <!-- Tambah input NIM -->
+                        <input type="text" class="form-control" id="nim" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat:</label> <!-- Tambah input alamat -->
+                        <input type="text" class="form-control" id="alamat" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="saveData()">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for editing existing data -->
+<div class="modal" id="editModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Data</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-data-form">
+                    <!-- Tambah input tersembunyi untuk ID -->
+                    <input type="hidden" id="editId">
+                    <div class="form-group">
+                        <label for="editNIM">NIM:</label> <!-- Tambah input NIM -->
+                        <input type="text" class="form-control" id="editNIM" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editNama">Nama:</label>
+                        <input type="text" class="form-control" id="editNama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editAlamat">Alamat:</label> <!-- Tambah input alamat -->
+                        <input type="text" class="form-control" id="editAlamat" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="saveEditedData()">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="aset/script.js"></script>
+</body>
+</html>
